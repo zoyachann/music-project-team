@@ -1,0 +1,33 @@
+.navbar {
+  background-color: white;
+  padding: 15px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: red;
+}
+
+.video-container {
+  position: relative;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.video-container img {
+  /* filter: brightness(0.7); */
+  border-radius: 15px;
+}
+
+/* .bollywood{
+  top: 50%;
+} */
