@@ -1,16 +1,11 @@
 
- const loginForm = document.getElementById('loginForm');
- const loginSuccessAlert = document.getElementById('loginSuccessAlert');
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
 
- loginForm.addEventListener('submit', function (event) {
-     event.preventDefault(); 
-     event.stopPropagation();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    console.log("Username:", username);
+    console.log("Password:", password);
 
-     if (loginForm.checkValidity()) {
-         
-         loginSuccessAlert.classList.remove('d-none');
-         loginForm.reset(); 
-     } else {
-         loginForm.classList.add('was-validated'); 
-     }
- });
+    document.getElementById("loginSuccessAlert").classList.remove("d-none");
+});

@@ -1,70 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" href="./image/DALL·E 2024-10-31 12.26.35 - Create an exact favicon of the uploaded logo with the text 'MB' in the same red and black style, ensuring it is clear and recognizable at a small scal.webp" type="image/png">
+    <title>MusicBeat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../index.css">
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-</head>
-<body class="bg-light">
 
-    <div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
-        <div class="row shadow-lg overflow-hidden bg-white w-100" style="max-width: 900px; border-radius: 30px;">
-             
-            <!-- Left Side -->
-            <div class="col-md-6 d-flex align-items-center justify-content-center text-white text-center bg-dark" 
-                 style="background: url('../../../music-project-team/images/Rectangle.png') no-repeat center center; background-size: cover;">
-                <h2 class="p-4 fs-5">Experience The Ultimate Harmony Of Rhythm And Melody With Our Curated Playlists, Crafted To Elevate Your Mood And Style.</h2>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container img-fluid">
+            <a class="navbar-brand fw-bold fs-4" href="../../index.htm"><span class="text-danger">M</span>usic<span
+                    class="text-danger">B</span>eat</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex justify-content-between m-auto">
+                    <li class="me-4">
+                        <a class="nav-link " aria-current="page" href="../../index.htm">Home</a>
+                    </li>
+                    <li class="me-4">
+                        <a class="nav-link" href="../contact/contact.html">Contact us</a>
+                    </li>
+                    <li class="me-4">
+                        <a class="nav-link" href="../Explor/Explor.htm">Explore</a>
+                    </li>
+                    <li class="me-4">
+                        <a class="nav-link" href="../Album/Album.htm">Album</a>
+                    </li>
+                    <li class="me-4">
+                        <a class="nav-link" href="/artists.html">Artists</a>
+                    </li>
+                </ul>
+                <a class="me-3 text-danger text-decoration-none" href="../../pages/login/login.html">Login</a>
+                <a class="border-0 bg-danger text-white rounded-1 p-1 px-3 text-decoration-none"
+                    href="/pages/sign up/signup.htm">signup</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container vh-100 mt-5 pt-5 pb-5">
+        <div class="row h-100">
+            <!-- Left Section with Image and Text -->
+            <div class="col-md-6 d-none d-md-block p-0 ">
+                <div class="h-100 w-100 text-white d-flex align-items-center justify-content-center rounded-start-5"
+                    style="background-image: url('../../imges/Rectangle.png'); background-size: cover; background-position: center;">
+                    <div class="text-center px-5">
+                        <h2>Experience The Ultimate Harmony Of Rhythm And Melody</h2>
+                        <p class="mt-3">
+                            With Our Curated Playlists, Crafted To Elevate Your Mood And Style.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Right Side -->
-            <div class="col-md-6 p-5">
-                <h2 class="fw-bold">SIGN UP</h2>
-                <p class="text-muted">We Can't Wait To Have You On Board. Sign Up Today And Unlock A World Of Possibilities!</p>
-                
-                <!-- Social Icons -->
-                <div class="d-flex my-5">
-                    <iconify-icon class="mx-1 px-2 fs-2" icon="flat-color-icons:google"></iconify-icon>
-                    <iconify-icon class="px-2 fs-2" icon="logos:facebook"></iconify-icon>
-                    <iconify-icon class="px-1 fs-2" icon="logos:twitter"></iconify-icon>
-                </div>
-                
-                <!-- Form -->
-                <form id="userDetails" onsubmit="return validateForm()">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <input id="userName" type="text" class="form-control rounded-pill" placeholder="First Name">
-                            <span id="nameError" class="error-message"></span>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <input id="lastName" type="text" class="form-control rounded-pill" placeholder="Last Name">
-                            <span id="lastNameError" class="error-message"></span>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input id="userEmail" type="email" class="form-control rounded-pill" placeholder="Email Address">
-                        <span id="emailError" class="error-message"></span>
-                    </div>
-                    <div class="mb-3">
-                        <input id="userPassword" type="password" class="form-control rounded-pill" placeholder="Password">
-                        <span id="passwordError" class="error-message"></span>
-                    </div>
-                    <button type="submit" class="btn btn-danger rounded-pill w-100">Sign up</button>
-                </form>
+            <!-- Right Section with Login Form -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center rounded-end-5"
+                style="background-color: #ffffff;">
+                <div class="w-75">
+                    <h1 class="card-title t mb-2 fw-bold">SIGN IN</h1>
+            <p class="text-start text-muted mb-3">We can't wait to have you on board. Sign up today and unlock a world of possibilities!</p>
 
-                <!-- Sign-in Link -->
-                <div class="text-center mt-3">
-                    <p class="mb-0">Already have an account? <a href="#" class="text-danger">Sign in</a></p>
+
+                    <!-- Social Icons -->
+                    <div class="d-flex mt-5 mb-3">
+                        <div class="bg-light p-1 py-2 rounded-5 shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="" width="2em" height="1em"
+                                viewBox="0 0 48 48">
+                                <path fill="#ffc107"
+                                    d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917" />
+                                <path fill="#ff3d00"
+                                    d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691" />
+                                <path fill="#4caf50"
+                                    d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.9 11.9 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44" />
+                                <path fill="#1976d2"
+                                    d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917" />
+                            </svg>
+                        </div>
+                        <div  class="bg-light py-2 rounded-5 shadow ms-2 px-2 ">
+                            <svg class="" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                viewBox="0 0 256 256">
+                                <path fill="#1877f2"
+                                    d="M256 128C256 57.308 198.692 0 128 0S0 57.308 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.348-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.959 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445" />
+                                <path fill="#fff"
+                                    d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A129 129 0 0 0 128 256a129 129 0 0 0 20-1.555V165z" />
+                            </svg>
+                        </div>
+                        <div  class="bg-light py-2 rounded-5 shadow ms-2 px-2">
+                            <svg class="" xmlns="http://www.w3.org/2000/svg" width="1.23em" height="1em"
+                                viewBox="0 0 256 209">
+                                <path fill="#55acee"
+                                    d="M256 25.45a105 105 0 0 1-30.166 8.27c10.845-6.5 19.172-16.793 23.093-29.057a105.2 105.2 0 0 1-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52c0 4.117.465 8.125 1.36 11.97c-43.65-2.191-82.35-23.1-108.255-54.876c-4.52 7.757-7.11 16.78-7.11 26.404c0 18.222 9.273 34.297 23.365 43.716a52.3 52.3 0 0 1-23.79-6.57q-.004.33-.003.661c0 25.447 18.104 46.675 42.13 51.5a52.6 52.6 0 0 1-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475c-17.975 14.086-40.622 22.483-65.228 22.483c-4.24 0-8.42-.249-12.529-.734c23.243 14.902 50.85 23.597 80.51 23.597c96.607 0 149.434-80.031 149.434-149.435q0-3.417-.152-6.795A106.8 106.8 0 0 0 256 25.45" />
+                            </svg>
+                        </div>
+
+                    </div>
+
+                    <!-- Login Form -->
+                    <form id="signup-form">
+                        <div class="row mb-3"></div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Password" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100" id="submitBtn">Sign in</button>
+                    </form>
+                    
+                    <div class="text-center mt-3">
+                        <span>Already have an account? <a href="../SIGN-IN/signin.html" class="text-decoration-none text-danger">Sign up</a></span>
+                    </div>
+                    
+                    <!-- Login Success Alert -->
+                    <div class="alert alert-success mt-3 d-none" id="loginSuccessAlert" role="alert">
+                    Signin successful!
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- footer section -->
+    <footer class="bg-dark text-white mt-5 pt-5 pb-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12 mb-4 mt-5">
+                    <h5 class="mt-3">MusicBeat All rights reserved.</h5>
+                    <p class="fs-5">All rights reserved.</p>
+                    <div class="d-flex justify-content-start">
+                        <a href="#" class="me-3 bg-secondary text-white p-1 px-2 rounded-circle">
+                            <iconify-icon class="fs-4 mt-1" icon="ri:facebook-fill"></iconify-icon>
+                        </a>
+                        <a href="#" class="me-3 bg-secondary text-white p-1 px-2 rounded-circle">
+                            <iconify-icon class="fs-4 mt-1" icon="ri:instagram-line"></iconify-icon>
+                        </a>
+                        <a href="#" class="me-3 bg-secondary text-white p-1 px-2 rounded-circle">
+                            <iconify-icon class="fs-4 mt-1" icon="mdi:twitter"></iconify-icon>
+                        </a>
+                        <a href="#" class="me-3 bg-secondary text-white p-1 px-2 rounded-circle">
+                            <iconify-icon class="fs-4 mt-1" icon="line-md:youtube-filled"></iconify-icon> </a>
+                    </div>
+                </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="signin.js"></script>
+
+                <div class="col-md-2 col-12 mb-4">
+                    <h5 class="mt-3 fw-bold mb-5">Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">About us</a></li>
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">Blog</a></li>
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">Contact us</a>
+                        </li>
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">Pricing</a></li>
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-md-2 col-12 mb-4">
+                    <h5 class="mt-3 fw-bold mb-5">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">Help center</a>
+                        </li>
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">Terms of
+                                service</a></li>
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">Legal</a></li>
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">Privacy
+                                policy</a></li>
+                        <li><a class="text-decoration-none text-white mt-2" ref="#" class="text-white">Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <h5 class="mt-3 fw-bold mb-5">Stay up to date</h5>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control" placeholder="Your email address"
+                            aria-label="Your email address">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <iconify-icon class="fs-2 text-white" icon="mingcute:send-line"></iconify-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>     
+    <script src="./signin.js"></script>
+
 </body>
+
 </html>

@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
+body{
+  font-family: "NTR", sans-serif;
+}
+
 .navbar {
   background-color: white;
   padding: 15px;
+  font-family: "NTR", sans-serif;
 }
 
 .navbar-brand {
